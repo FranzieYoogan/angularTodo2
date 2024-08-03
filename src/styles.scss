@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+
+    background: url('/wallpaper/wallpaper1.avif');
+    background-size: 100%;
+
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-size: 250%;
+      background-position-x: 55%;
+    }
+  }

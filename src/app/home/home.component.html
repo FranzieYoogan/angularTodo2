@@ -1,0 +1,74 @@
+
+<section class="containerAll" id="containerAll">
+
+    <div>
+
+
+   
+    <h1 class="timeStyle" id="time"></h1>
+
+
+    @for (item of data; track $index) {
+
+        <div class="containerItems">
+
+            <div style="position: relative;">
+                <h1 class="title">{{item.name}}</h1>
+                @if (item.confirm == "1") {
+
+                    <img class="check" id="check" src="/icons/check.png" alt="">
+                    <img class="delete" (click)="delete(item._id)" id="delete" src="/icons/delete.png" alt="">
+
+                } @else {
+
+                    <img class="check2" id="check2" src="/icons/check.png" alt="">
+                }
+              
+            </div>
+            
+            
+            <div style="display: flex; justify-content: space-between;">
+                <p class="task">{{item.task}}</p> <button class="buttonConfirm" (click)="confirm(item._id)">Confirm</button>
+            </div>
+          
+    
+        </div>
+        
+
+    }
+
+    <div class="containerButton">
+
+        <button type="button" (click)="showPost()" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Add Task</button>
+    
+    </div>
+
+</div>
+    
+
+
+</section>
+
+<section class="containerNew" id="containerNew">
+
+    <div class="containerTaskItems">
+
+ 
+    <h1 class="titleTask">New Task</h1>
+
+    <div>
+        <input type="text" id="inputName" placeholder="Enter Name">
+    </div>
+
+    <div>
+        <input class="input2" type="text" id="inputTask"  placeholder="Enter Task">
+    </div>
+
+    <button type="button"  (click)="postData()" class="buttonAdd text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Add Task</button>
+    
+
+</div>
+    
+</section>
+
+
