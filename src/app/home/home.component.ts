@@ -25,8 +25,10 @@ export class HomeComponent implements OnInit {
     const datee = new Date()
     const hours = datee.getHours()
     const minutes = datee.getMinutes()
+    const seconds = datee.getSeconds()
     time.innerHTML = `${hours}:${minutes}`
-    
+
+      
 
     this.cruds.getData().subscribe(config => {
       
