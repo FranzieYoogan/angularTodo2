@@ -9,7 +9,7 @@ const port = 3000;
 app.use(bodyParser.json());
 app.use(cors());
 
-const url = 'mongodb+srv://franzieyoogan2:admin357159@cluster0.guw8a4s.mongodb.net/';
+const url = 'yourKluster';
 const dbName = 'todo';
 
 MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
